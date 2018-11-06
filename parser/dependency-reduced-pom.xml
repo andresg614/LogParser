@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ef</groupId>
+  <artifactId>parser</artifactId>
+  <version>1.0</version>
+  <developers>
+    <developer>
+      <id>andres.gutierrez</id>
+      <name>Andres Gutierrez</name>
+    </developer>
+  </developers>
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+    <hibernate.version>5.2.9.Final</hibernate.version>
+    <slf4j.version>1.5.8</slf4j.version>
+    <spring.version>4.3.7.RELEASE</spring.version>
+    <apache.version>2.1.1</apache.version>
+    <log4j.version>1.2.14</log4j.version>
+    <batch.version>3.0.8.RELEASE</batch.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <mysql.version>6.0.5</mysql.version>
+  </properties>
+</project>
+
